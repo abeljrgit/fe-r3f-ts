@@ -1,0 +1,140 @@
+.skcard {
+  background-color: $skcard-bg;
+  width: 30rem;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 16px 16px rgba($my-color-2, 0.25);
+  border-radius: 1rem;
+  transition: all 0.25s ease;
+  @media screen and (max-width: 1366px) {
+    width: 25rem;
+  }
+  @media screen and (max-width: 1000px) {
+    padding: 3rem 2rem;
+    width: 23rem;
+  }
+
+  &:not(:last-of-type) {
+    margin-right: 5rem;
+    @media screen and (max-width: 1366px) {
+      margin-right: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      margin-right: 0;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0.75px 3px 3px rgba($my-color-2, 0.25);
+    transition: all 0.25s ease;
+  }
+
+  &__logos {
+    min-height: 8rem;
+    display: flex;
+    @media screen and (max-width: 1366px) {
+      min-height: unset;
+      max-height: 6rem;
+    }
+
+    & > img {
+      display: block;
+
+      @media screen and (max-width: 1366px) {
+        max-height: 4rem;
+        max-width: 4rem;
+      }
+    }
+
+    & > img:not(:last-of-type) {
+      @media screen and (max-width: 1366px) {
+        margin-right: 0.5rem;
+      }
+    }
+
+    & > img:nth-of-type(2n + 1) {
+      margin-top: auto;
+    }
+
+    & > img:nth-of-type(2n + 2) {
+      margin-bottom: auto;
+    }
+  }
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: $my-color;
+    margin-top: 1rem;
+    @media screen and (max-width: 1366px) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__details {
+    font-size: 1.6rem;
+    color: $my-color-2;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 1366px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__seemore {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $my-color;
+    text-decoration: none;
+    border: 0.1rem solid $my-color;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: auto;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.25s ease;
+    @media screen and (max-width: 1366px) {
+      font-size: 1.2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $my-color;
+      z-index: -1;
+      transform: translateX(-120%);
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      color: $white;
+      transition: all 0.25s ease;
+
+      &::after {
+        transform: translateX(0);
+        transition: all 0.5s ease;
+      }
+    }
+
+    &:active {
+      border: 1px solid rgba($my-color, 0.5);
+
+      &::after {
+        background-color: rgba($my-color, 0.5);
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}

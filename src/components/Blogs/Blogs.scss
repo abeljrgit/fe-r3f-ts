@@ -1,0 +1,111 @@
+.blogs {
+  &__container {
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 10rem 1rem;
+    @media screen and (max-width: 768px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $lora;
+    font-size: 6.4rem;
+    font-weight: 600;
+    color: $my-color;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 768px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+
+    & a {
+      width: 32%;
+      @media screen and (max-width: 800px) {
+        width: 49%;
+      }
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+
+    & a:not(:nth-of-type(3n + 3)) {
+      margin-right: 2%;
+      @media screen and (max-width: 800px) {
+        margin-right: 0;
+      }
+    }
+
+    & a:not(:nth-of-type(2n + 2)) {
+      @media screen and (max-width: 800px) {
+        margin-right: 2%;
+      }
+      @media screen and (max-width: 600px) {
+        margin-right: 0;
+      }
+    }
+
+    & a:nth-of-type(n + 1) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__pagination {
+    align-self: center;
+    display: flex;
+
+    & a,
+    & div {
+      width: 5rem;
+      height: 5rem;
+      font-size: 2.4rem;
+      font-weight: 500;
+      text-decoration: none;
+      text-align: center;
+      color: $my-color;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.25s ease;
+      @media screen and (max-width: 768px) {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.6rem;
+      }
+    }
+
+    & a {
+      border: 0.1rem solid $my-color;
+      &:hover {
+        background-color: $my-color;
+        color: $white;
+        transition: all 0.25s ease;
+      }
+    }
+
+    & a:not(:last-of-type) {
+      margin-right: 1.6rem;
+      @media screen and (max-width: 768px) {
+        margin-right: 1.2rem;
+      }
+    }
+
+    & div {
+      margin-right: 1.6rem;
+      @media screen and (max-width: 768px) {
+        margin-right: 1.2rem;
+      }
+    }
+  }
+}

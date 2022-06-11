@@ -1,0 +1,64 @@
+.link {
+  display: block;
+  text-decoration: none;
+
+  &:not(:last-of-type) {
+    margin-right: 2rem;
+    @media screen and (max-width: 1200px) {
+      margin-right: 1rem;
+    }
+    @media screen and(max-width:768px) {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &:hover {
+    & .link__wrapper {
+      background-color: $white;
+      transition: all 0.25s ease;
+    }
+
+    & .link__image > svg {
+      stroke: $my-color;
+      transition: all 0.25s ease;
+    }
+
+    & .link__text {
+      color: $my-color;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: $my-color;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    transition: all 0.25s ease;
+    @media screen and(max-width:768px) {
+      border-radius: 0;
+    }
+  }
+
+  &__image {
+    width: 2.4rem;
+    height: 2.4rem;
+
+    & svg {
+      stroke: $white;
+      transition: all 0.25s ease;
+    }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    line-height: 0.8;
+    text-decoration: none;
+    color: $white;
+    margin-left: 0.5rem;
+    transition: all 0.25s ease;
+  }
+}

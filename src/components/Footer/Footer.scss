@@ -1,0 +1,108 @@
+.footer {
+  background-color: $my-color;
+
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 5rem 1rem;
+    @media screen and (max-width: 1366px) {
+      padding: 5rem 5rem;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      padding: 2.5rem 2.5rem;
+    }
+  }
+
+  &__logo-copyright {
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    @media screen and (max-width: 768px) {
+      margin-bottom: 4rem;
+    }
+
+    & > span {
+      font: 400 1.6rem/1 $zekago-new;
+      color: $white;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__logo {
+    width: 4rem;
+    height: 4rem;
+    background-color: $my-color;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 768px) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:hover {
+      transform: rotate(360deg);
+      transition: all 1s ease;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__links-col {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 5rem;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 8rem;
+      @media screen and (max-width: 768px) {
+        margin-right: 6rem;
+      }
+    }
+  }
+
+  &__links-title {
+    font: 500 2.4rem/1 $zekago-new;
+    color: $white;
+    margin-bottom: 2rem;
+  }
+
+  &__links-main {
+    display: flex;
+    flex-direction: column;
+
+    & > a {
+      font: 300 1.6rem/1 $zekago-new;
+      color: $white;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+  }
+}

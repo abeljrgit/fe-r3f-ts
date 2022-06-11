@@ -1,0 +1,32 @@
+.works {
+  &__container {
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 10rem 1rem;
+    @media screen and (max-width: 768px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    font-family: $lora;
+    font-size: 6.4rem;
+    font-weight: 600;
+    color: $my-color;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 768px) {
+      font-size: 3.2rem;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+  }
+}

@@ -1,0 +1,20 @@
+.skcards {
+  &__container {
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 10rem 1rem;
+    @media screen and (max-width: 768px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

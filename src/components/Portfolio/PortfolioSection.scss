@@ -1,0 +1,171 @@
+.portfolio-section {
+  &__container {
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 10rem 1rem;
+    @media screen and (max-width: 1200px) {
+      padding: 7rem 1rem;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 5rem 1rem;
+    }
+    @media screen and (max-width: 414px) {
+      padding: 2.5rem 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 1200px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+
+    &--reversed {
+      flex-direction: row-reverse;
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__visual {
+    max-width: 58rem;
+    @media screen and (max-width: 1200px) {
+      max-width: 40rem;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    max-width: 52rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 4.5rem 0 4.5rem;
+    @media screen and (max-width: 1200px) {
+      max-width: 40rem;
+    }
+    @media screen and (max-width: 1000px) {
+      padding: 0 3.5rem 0 3.5rem;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0;
+      align-items: center;
+      margin-top: 2.4rem;
+    }
+
+    &--reversed {
+      padding: 0 4.5rem 0 4.5rem;
+      @media screen and (max-width: 1000px) {
+        padding: 0 3.5rem 0 3.5rem;
+      }
+      @media screen and (max-width: 768px) {
+        padding: 0;
+        align-items: center;
+        margin-top: 2.4rem;
+      }
+    }
+  }
+
+  &__content-title {
+    font-size: 4rem;
+    color: $my-color;
+    @media screen and (max-width: 1200px) {
+      font-size: 3rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      font-size: 2.4rem;
+    }
+  }
+
+  &__content-paragraph {
+    font-size: 1.6rem;
+    line-height: 2;
+    text-align: justify;
+    color: $my-color-2;
+    margin-top: 2rem;
+    @media screen and (max-width: 1200px) {
+      font-size: 1.2rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__content-buttons {
+    display: flex;
+    justify-content: stretch;
+    margin-top: 2rem;
+  }
+
+  &__content-buttons a {
+    flex-grow: 1;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: $my-color;
+    text-decoration: none;
+    text-align: center;
+    border: 0.1rem solid $my-color;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: auto;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    transition: all 0.25s ease;
+    @media screen and (max-width: 1366px) {
+      font-size: 1.2rem;
+    }
+    @media screen and (max-width: 1200px) {
+      font-size: 1.2rem;
+      padding: 1rem 1rem 1rem 1rem;
+    }
+
+    &:not(:first-of-type) {
+      margin-left: 2rem;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $my-color;
+      z-index: -1;
+      transform: translateX(-120%);
+      transition: all 0.5s ease;
+    }
+
+    &:hover {
+      color: $white;
+      transition: all 0.25s ease;
+
+      &::after {
+        transform: translateX(0);
+        transition: all 0.5s ease;
+      }
+    }
+
+    &:active {
+      border: 1px solid rgba($my-color, 0.5);
+
+      &::after {
+        background-color: rgba($my-color, 0.5);
+        transition: all 0.25s ease;
+      }
+    }
+  }
+}

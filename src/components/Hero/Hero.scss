@@ -1,0 +1,106 @@
+.hero {
+  &__container {
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 10rem 1rem;
+    @media screen and (max-width: 1366px) {
+      padding: 6rem 12rem;
+    }
+    @media screen and (max-width: 900px) {
+      padding: 6rem 8rem;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 6rem 1rem;
+    }
+    @media screen and (max-width: 450px) {
+      padding: 4rem 1rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__title {
+    font: 700 9.6rem/1 $lora;
+    color: $my-color-2;
+    @media screen and (max-width: 1366px) {
+      font-size: 6.4rem;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 4.8rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    & > span {
+      color: $my-color;
+    }
+  }
+
+  &__lead {
+    max-width: 44rem;
+    margin-top: 1rem;
+    font: 500 3.6rem/1.33 $lora;
+    color: $my-color-2;
+    @media screen and (max-width: 1366px) {
+      font-size: 2.4rem;
+      max-width: 30rem;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 2rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__paragraph {
+    max-width: 70rem;
+    margin-top: 4rem;
+    font: 500 2.4rem/1.5 $zekago-new;
+    color: $my-color-2;
+    @media screen and (max-width: 1366px) {
+      font-size: 1.6rem;
+      max-width: 46.2rem;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 1.2rem;
+      max-width: 36rem;
+    }
+    @media screen and (max-width: 768px) {
+      text-align: center;
+      margin-top: 2rem;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    & > span {
+      color: $my-color;
+      font-weight: 700;
+    }
+  }
+
+  &__avatar {
+    @media screen and (max-width: 1366px) {
+      width: 24rem;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 20rem;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.header {
+  background-color: $my-color;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 119rem;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+  }
+
+  &__logo {
+    width: 4rem;
+    height: 4rem;
+    background-color: $my-color;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-position: center;
+    mask-position: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+    overflow: hidden;
+    @media screen and (max-width: 768px) {
+      width: 4rem;
+      height: 4rem;
+    }
+
+    &:hover {
+      transform: rotate(360deg);
+      transition: all 1s ease;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
+
+    & > img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__links {
+    display: flex;
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__sidemenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 20rem;
+    height: 100vh;
+    background-color: $my-color-2;
+    padding-top: 10.4rem;
+    z-index: 10;
+    display: none;
+    transition: all 0.5s ease;
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    &--visible {
+      right: 0;
+      transition: all 0.5s ease;
+    }
+  }
+}

@@ -1,4 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap");
+
+$zekago-new: "Zen Kaku Gothic New", sans-serif;
+$lora: "Lora", serif;
+$white: #ffffff;
+$my-color: #e5383b;
+$my-color-2: #161a1d;
+$skcard-bg: #f5f3f4;
+
+// Reset
+@import "./Reset.scss";
+// Header
+@import "../components/Header/Burger.scss";
+@import "../components/Header/Link.scss";
+@import "../components/Header/Header.scss";
+// Hero
+@import "../components/Hero/Hero.scss";
+// Skill Cards
+@import "../components/SkillCards/SkillCard.scss";
+@import "../components/SkillCards/SkillCards.scss";
+// Portfolio
+@import "../components/Portfolio/PortfolioSection.scss";
+// RecentBlog
+@import "../components/RecentWorks/RecentWorks.scss";
+// Contact Me
+@import "../components/ContactMe/ContactMe.scss";
+//Footer
+@import "../components/Footer/Footer.scss";
+// Blogs
+@import "../components/Blogs/BlogCard.scss";
+@import "../components/Blogs/Blogs.scss";
+// Works
+@import "../components/Works/WorksCard.scss";
+@import "../components/Works/Works.scss";
+
 body {
   width: 100%;
-  height: 100%;
+  // height: 100%;
+  font-family: $zekago-new;
+}
+
+main {
+  width: 100%;
 }
