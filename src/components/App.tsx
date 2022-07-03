@@ -8,6 +8,7 @@ import Hero from "./Hero/Hero";
 import Portfolio from "./Portfolio/Portfolio";
 import RecentBlog from "./RecentWorks/RecentWorks";
 import SkillCards from "./SkillCards/SkillCards";
+import ThreeUX from "./ThreeUX/ThreeUX";
 import Works from "./Works/Works";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
 
   return (
     <Fragment>
+      <ThreeUX />
       <Header onChangePage={onChangePageHandler} />
       {isCurrentContent === "HOME" && (
         <Fragment>
