@@ -6,7 +6,7 @@ function RecentBlog() {
   let rwArrTemp: any;
 
   useEffect(() => {
-    fetch("https://abel-jr.tech/wp-json/wp/v2/works?_embed&per_page=3")
+    fetch("https://abel-jr.tech/wp-json/wp/v2/works?_embed")
       .then((response) => response.json())
       .then((data) => {
         rwArrTemp = data.map((post: any, i: number) => {
